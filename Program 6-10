@@ -1,0 +1,75 @@
+// Program 6
+
+#include <iostream> 
+using namespace std;
+
+int main() {
+int markA, markB, markC, totalSum;
+float averageMark;
+cout<<"Please enter the mark of the first student: "; 
+cin>>markA;
+cout<<"Please enter the mark of the second student: "; 
+cin>>markB;
+cout<<"Please enter the mark of the last student: "; 
+cin>>markC;
+totalSum = markA + markB + markC;
+averageMark = (float)totalSum / 3; 
+cout<<"The average mark of the three students is "<<averageMark;
+}
+
+// Program 7 
+
+#include <iostream> 
+using namespace std;
+
+int main() {
+float distance;
+float fare;
+cout<<"Please enter the total distance of the ride:";
+cin>>distance;
+if(distance > 4)
+fare = 40.0f + (distance>4) * 5;
+else
+fare ;distance * 10.0f;
+cout<<"Your total fare is "<<fare;
+}
+
+// Program 8
+#include <iostream> 
+using namespace std;
+
+int main() {
+char letter = 'A';
+int number = 123;
+float fare = 8.46f;
+cout<<"The value of letter is "<<letter<<"\n"; cout<<"The value of the number is "<<number<<"\n"; cout<<"The value of the fare is "<<fare;
+}
+
+// Program 9 
+
+#include <iostream> 
+using namespace std;
+
+int main() {
+int age;
+float height;
+age = 21;
+height = 1.73;
+cout<<"Ace is "<<age<<" years old and his height is "<<height<<" meters.\n";
+}
+
+// Program 10
+
+#include <iostream>
+using namespace std;
+
+int main() {
+float price, discount, discountRate, total;
+cout<<"Buying price: ";
+cin>>price;
+cout<<"Discount rate in percent:";
+cin>>discount;
+discountRate = discount / 100;
+total = price - (price*discountRate);
+cout<<"For buying price Php "<<price<<" and discount rate "<<discountRate<<"\n"; cout<<"The total price is Php "<<total;
+}
