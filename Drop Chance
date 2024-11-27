@@ -1,0 +1,42 @@
+#include "dropChance.h"
+
+double dropChance(double dropRate, int attempts) {
+    double chance = 1 - pow(1 - dropRate, attempts);
+    return chance;
+}
+
+
+
+#include <cmath>
+
+#ifndef DROPCHANCE_H
+#define DROPCHANCE_H
+
+double dropChance (double dropRate, int attempts);
+
+#endif
+
+
+
+
+
+#include <iostream>
+#include "dropChance.h"
+using namespace std;
+
+int main() {
+    double dropRate;
+    int attempts;
+
+    cout << "Enter the drop rate: ";
+    cin >> dropRate;
+    dropRate = dropRate/100;
+
+    cout << "Enter the number of attempts: ";
+    cin >> attempts;
+
+    double chance = dropChance(dropRate, attempts);
+    cout << "The chance of getting the drop in " << attempts << " attempts is: " << chance * 100 << "%" << endl;
+
+    return 0;
+}
