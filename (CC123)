@@ -1,0 +1,29 @@
+//CONSTRUCTOR AND DECONSTRUCTORS
+#include<iostream>
+using namespace std;
+
+class Shape{
+	protected:
+	    double length, width, heights;
+	public:
+		Shape(double len, double wid, double hgt); // this
+		 void getDimension();
+};		
+
+Shape::Shape(double len, double wid, double hgt){
+	length = len;
+	width = wid;
+	heights = hgt;
+};
+
+void Shape::getDimension(){
+     cout<<"the length is "<< length<<endl;
+     cout<<"the width is "<< width<<endl;
+     cout<<"the height is "<< heights<<endl;     
+}
+
+int main(){
+	Shape smallBox(1,2,5);
+	smallBox.getDimension();
+	return 0;
+}
