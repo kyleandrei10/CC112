@@ -1,0 +1,61 @@
+include <iostream>
+#include <cmath>
+using namespace std;
+
+class Shape {
+    protected:
+        double lenght=0, height=0, base=0;
+        double radius = base/2;
+    public:
+        void getDimension();
+};
+
+void Shape::getDimension() {
+    if (lenght > 0) {
+        cout<<"The lenght is "<<lenght<<endl;
+    }
+    if (height > 0) {
+        cout<<"The height is "<<height<<endl;
+    }
+    if (base > 0) {
+        cout<<"The base is "<<base<<endl;
+    }if (radius > 0) {
+        cout<<"The radius is "<<radius<<endl;
+    }
+}
+
+class Cone: public Shape {
+        public:
+            Cone (double r, double h);
+            void cone_vol();
+            void cone_area();
+};
+
+Cone::Cone (double r, double h) {
+    radius = r;
+    height = h;
+};
+
+void Cone::cone_vol() {
+    double vol = 0;
+    vol = 3.1415926*(radius*radius*height)/3;
+    cout<<"The volume of the cone is "<<vol<<endl;
+}
+
+void Cone::cone_area () {
+    double area=0;
+    double r_squared = pow(radius, 2);
+    double h_squared = pow(height, 2);
+    double l = (sqrt(r_squared + h_squared));
+    area = 3.1415926 * (radius*radius)+3.1415926 * radius * l;
+    cout<<"The area of the cone is "<<area<<endl;
+}
+
+int main() {
+    Cone smallCone(5, 20);
+    smallCone.getDimension();
+    smallCone.cone_vol();
+    smallCone.cone_area();
+    
+    return 0;
+}
